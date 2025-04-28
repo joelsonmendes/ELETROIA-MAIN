@@ -15,10 +15,12 @@
   </h1>
   <p>Descreva seu problema elétrico ou use o microfone!</p>
 
-  <input type="text" id="pergunta" placeholder="Digite seu problema aqui...">
-  <button id="btnEnviar" onclick="enviarPergunta()">Enviar</button>
+  <div class="container">
+    <input type="text" id="pergunta" placeholder="Digite seu problema aqui...">
+    <button id="btnEnviar" onclick="enviarPergunta()">Enviar</button>
 
-  <div id="resposta"></div>
+    <div id="resposta"></div>
+  </div>
 
   <button id="btnVoz" onclick="ativarVoz()" title="Clique para falar">
     <img src="Microfone.jfif" alt="Microfone" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
