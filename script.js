@@ -76,7 +76,7 @@ function falar(mensagem) {
         }
     }
 
-    fala.rate = 1.5;
+    fala.rate = 1.0;
     fala.pitch = 1.0;
     fala.volume = 1.0;
     sintese.speak(fala);
