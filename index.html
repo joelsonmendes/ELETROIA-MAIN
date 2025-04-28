@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>EletroIA - Assistente Elétrico</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>
+    EletroIA ⚡
+    <img src="ROBÔ.webp" alt="Ícone de robô" style="height: 48px; vertical-align: middle; margin-left: 10px;">
+  </h1>
+  <p>Descreva seu problema elétrico ou use o microfone!</p>
+
+  <input type="text" id="pergunta" placeholder="Digite seu problema aqui...">
+  <button id="btnEnviar" onclick="enviarPergunta()">Enviar</button>
+
+  <div id="resposta"></div>
+
+  <button id="btnVoz" onclick="ativarVoz()" title="Clique para falar">
+    <img src="Microfone.jfif" alt="Microfone" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
