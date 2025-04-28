@@ -305,6 +305,66 @@ h1 {
   color: #00aaff;
   text-shadow: 0 0 10px #00aaff, 0 0 20px #00d4ff;
   margin-bottom: 10px;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+#btnVoz {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001f33;
+  color: white;
+  font-size: 28px;
+  border: 3px solid #00aaff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px #00aaff,
+    0 0 20px #00d4ff,
+    0 0 30px #00aaff,
+    0 0 40px #00d4ff,
+    0 0 60px #00aaff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#btnVoz:hover {
+  background-color: #0077cc;
+  box-shadow:
+    0 0 20px #00d4ff,
+    0 0 30px #00aaff,
+    0 0 40px #00d4ff,
+    0 0 60px #00aaff;
+}
+
+/* Neon lilac outline and size increase on mobile */
+@media (max-width: 600px) {
+  #btnVoz {
+    width: 120px;
+    height: 120px;
+    font-size: 36px;
+    border-color: #c8a2c8; /* lilac */
+    box-shadow:
+      0 0 15px #c8a2c8,
+      0 0 30px #c8a2c8,
+      0 0 45px #c8a2c8,
+      0 0 60px #c8a2c8;
+  }
+
+  h1 {
+    font-size: 64px;
+    color: #c8a2c8;
+    text-shadow:
+      0 0 10px #c8a2c8,
+      0 0 20px #c8a2c8,
+      0 0 30px #c8a2c8;
+  }
 }
 
 p {
