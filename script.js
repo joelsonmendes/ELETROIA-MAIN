@@ -43,6 +43,7 @@ function enviarPergunta(texto = null) {
 
     document.getElementById("resposta").innerText = resposta;
     falar(resposta);
+    document.getElementById("pergunta").value = "";
 }
 
 function ativarVoz() {
