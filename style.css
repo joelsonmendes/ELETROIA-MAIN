@@ -358,12 +358,15 @@ h1 {
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 80px;
     color: #c8a2c8;
+    font-weight: 900;
+    text-transform: uppercase;
     text-shadow:
-      0 0 10px #c8a2c8,
-      0 0 20px #c8a2c8,
-      0 0 30px #c8a2c8;
+      0 0 15px #c8a2c8,
+      0 0 30px #c8a2c8,
+      0 0 45px #c8a2c8,
+      0 0 60px #c8a2c8;
   }
 }
 
