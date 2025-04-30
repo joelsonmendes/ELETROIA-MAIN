@@ -89,16 +89,35 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 }
 
 function getPortugueseVoice() {
-  for (let voice of voices) {
-    if (voice.lang === 'pt-BR' && voice.name.toLowerCase().includes('male')) {
-      console.log('Selected male pt-BR voice:', voice.name);
-      return voice;
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    // On mobile, prefer male pt-BR voice if available
+    for (let voice of voices) {
+      if (voice.lang === 'pt-BR' && voice.name.toLowerCase().includes('male')) {
+        console.log('Selected male pt-BR voice (mobile):', voice.name);
+        return voice;
+      }
     }
-  }
-  for (let voice of voices) {
-    if (voice.lang === 'pt-BR') {
-      console.log('Selected pt-BR voice:', voice.name);
-      return voice;
+    // Otherwise, fallback to any pt-BR voice
+    for (let voice of voices) {
+      if (voice.lang === 'pt-BR') {
+        console.log('Selected pt-BR voice (mobile):', voice.name);
+        return voice;
+      }
+    }
+  } else {
+    // Desktop: prefer male pt-BR voice
+    for (let voice of voices) {
+      if (voice.lang === 'pt-BR' && voice.name.toLowerCase().includes('male')) {
+        console.log('Selected male pt-BR voice:', voice.name);
+        return voice;
+      }
+    }
+    for (let voice of voices) {
+      if (voice.lang === 'pt-BR') {
+        console.log('Selected pt-BR voice:', voice.name);
+        return voice;
+      }
     }
   }
   for (let voice of voices) {
@@ -121,7 +140,8 @@ function speak(text) {
   utterance.lang = 'pt-BR';
   utterance.rate = 1.5;
   utterance.pitch = 1.0;
-  utterance.volume = 1.0;
+  // Lower volume on mobile devices
+  utterance.volume = /Mobi|Android/i.test(navigator.userAgent) ? 0.6 : 1.0;
   utterance.onstart = () => console.log('Speech started');
   utterance.onend = () => {
     console.log('Speech ended');
