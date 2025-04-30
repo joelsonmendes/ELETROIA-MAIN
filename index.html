@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>EletroIA - Assistente Elétrico</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>EletroIA - Assistente Elétrico HUD J.A.R.V.I.S</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo&family=Audiowide&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div id="hud-container">
+    <!-- Floating particles -->
+    <canvas id="particles"></canvas>
 
-  <h1>
-    <img src="ROBÔ3.png" alt="Ícone de robô" style="height: 110px; vertical-align: middle; margin-right: 10px;">
-    EletroIA ⚡
-  </h1>
-  <p>Descreva seu problema elétrico ou use o microfone!</p>
+    <!-- Central arc reactor style button -->
+    <button id="arc-reactor-btn" title="Clique para ativar a IA">
+      <div class="pulse-ring"></div>
+      <div class="inner-circle"></div>
+    </button>
 
-  <div class="container">
-    <input type="text" id="pergunta" placeholder="Digite seu problema aqui...">
-    <button id="btnEnviar" onclick="enviarPergunta()">Enviar</button>
+    <!-- Voice vibration bars -->
+    <div id="voice-vibration" class="hidden">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+    </div>
 
-    <div id="resposta"></div>
+    <!-- Response text area -->
+    <div id="response-text" class="hidden"></div>
+
+    <!-- HUD dynamic elements -->
+  <div id="hud-elements">
+      <div class="hud-circle hud-circle1"></div>
+      <div class="hud-circle hud-circle2"></div>
+      <div class="hud-circle hud-circle3"></div>
+      <div class="hud-radar"></div>
+      <div class="hud-info-bar hud-info-bar1"></div>
+      <div class="hud-info-bar hud-info-bar2"></div>
+      <div class="hud-info-bar hud-info-bar3"></div>
+
+      <!-- System status indicators -->
+      <div id="system-status" class="hud-status">
+        <div class="status-item">
+          <span class="status-label">Energia</span>
+          <div class="status-bar" id="energy-bar"></div>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Falhas</span>
+          <div class="status-bar" id="ammo-bar"></div>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Danos</span>
+          <div class="status-bar" id="damage-bar"></div>
+        </div>
+      </div>
+
+      <!-- Floating real-time analysis texts -->
+      <div id="floating-texts">
+        <div class="floating-text" style="top: 5%; left: 5%;">Sistema: Normal</div>
+        <div class="floating-text" style="top: 5%; right: 5%;">EletroIA</div>
+        <div class="floating-text" style="bottom: 5%; left: 5%;">Voz:Recognition</div>
+        <div class="floating-text" style="bottom: 5%; right: 5%;">Sist: Normal</div>
+      </div>
+
+      <!-- Facial/environmental scan placeholder -->
+      <div id="scan-display">
+        <canvas id="scan-canvas"></canvas>
+      </div>
+    </div>
   </div>
 
-  <button id="btnVoz" onclick="ativarVoz()" title="Clique para falar">
-    <img src="Microfone.jfif" alt="Microfone" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-  </button>
-
-  <script src="script.js"></script>
-
+  <script src="main.js"></script>
 </body>
 </html>
