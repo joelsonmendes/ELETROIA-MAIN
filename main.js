@@ -263,6 +263,38 @@ function processQuestion(text) {
     {
       keywords: ["energia", "queda", "oscilação", "queda de energia"],
       resposta: "Pode ser problema na rede elétrica ou no disjuntor. Consulte a companhia elétrica se persistir."
+    },
+    {
+      keywords: ["motor", "aquecendo", "esquentando", "superaquecimento"],
+      resposta: "Motor aquecendo pode indicar sobrecarga, ventilação insuficiente ou problemas nos rolamentos. Verifique a corrente, ventilação e lubrificação."
+    },
+    {
+      keywords: ["transformador", "ruído alto", "barulho", "zumbido"],
+      resposta: "Ruído alto em transformador pode ser folga mecânica, sobrecarga ou problemas no núcleo magnético. Verifique carga e conexões."
+    },
+    {
+      keywords: ["motor", "vibrando", "vibração excessiva"],
+      resposta: "Vibração no motor pode ser desbalanceamento, desalinhamento, problemas nos rolamentos ou base inadequada. Verifique fixação e alinhamento."
+    },
+    {
+      keywords: ["motor", "corrente alta", "consumo elevado"],
+      resposta: "Corrente alta no motor pode indicar sobrecarga mecânica, problemas elétricos ou tensão incorreta. Verifique carga e tensão de alimentação."
+    },
+    {
+      keywords: ["motor", "ruído", "rolamento", "barulho rolamento"],
+      resposta: "Ruído no rolamento do motor indica desgaste ou falta de lubrificação. Recomenda-se substituição do rolamento."
+    },
+    {
+      keywords: ["motor monofásico", "não parte", "alta corrente", "não arranca"],
+      resposta: "Motor monofásico não partir com alta corrente pode ser capacitor defeituoso, problema no enrolamento ou carga travada. Verifique capacitor e rotação manual."
+    },
+    {
+      keywords: ["contator", "ruído alto", "barulho", "vibração"],
+      resposta: "Ruído no contator pode ser núcleo magnético sujo ou desgastado, ou tensão da bobina inadequada. Verifique limpeza e tensão de operação."
+    },
+    {
+      keywords: ["contator", "não liga", "sem passagem", "entrada saída"],
+      resposta: "Contator não ligando entrada com saída pode ser bobina queimada, contatos soldados ou problema no comando. Verifique tensão na bobina e estado dos contatos."
     }
   ];
 
